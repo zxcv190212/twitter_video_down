@@ -1,0 +1,197 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 상단 정렬 */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; /* 기존 650px에서 넓힘 */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    width: calc(100% - 36px); /* 패딩 고려 */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #1da1f2;
+    box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.2);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #1da1f2;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #0c85d0;
+    transform: translateY(-2px);
+}
+
+.message {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.message.error {
+    background-color: #ffebeb;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+}
+
+.message.info {
+    background-color: #e6f7ff;
+    color: #31708f;
+    border: 1px solid #31708f;
+}
+
+.message.warning {
+    background-color: #fff8e1;
+    color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+}
+
+/* --- 결과 섹션 가로 배치 및 영상 아이템 스타일 --- */
+.result-section {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+
+    display: flex;
+    flex-wrap: wrap; /* 여러 줄 허용 */
+    gap: 25px; /* 아이템 사이 간격 */
+    justify-content: center; /* 중앙 정렬 */
+}
+
+.video-item {
+    flex: 1 1 280px; /* 기본 너비 280px, 공간 따라 늘어남 */
+    max-width: 320px;
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.thumbnail {
+    max-width: 350px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    object-fit: contain;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+}
+
+.download-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* 다른 영상 다운로드 버튼 스타일 */
+.other-download-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 30px;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.other-download-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.note {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    input[type="text"], button[type="submit"], .download-button, .other-download-button {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+}
