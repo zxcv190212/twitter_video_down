@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>트위터 영상 다운로더</title>
+    <title>twitter video downloader</title>
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
     <div class="container">
-        <h1>트위터 영상 다운로더</h1>
-        <p>트위터 게시물 URL을 입력하면 영상 썸네일과 다운로드 링크를 얻을 수 있습니다.</p>
+        <h1>twitter video downloader</h1>
 
         <% if (!videoData || videoData.length === 0) { %>
             <!-- 영상 없을 때만 입력 폼 보여주기 -->
@@ -21,7 +20,7 @@
                     value="<%= typeof submittedUrl !== 'undefined' ? submittedUrl : '' %>"
                     required
                 />
-                <button type="submit">썸네일 및 링크 가져오기</button>
+                <button type="submit">video down</button>
             </form>
         <% } %>
 
@@ -35,7 +34,7 @@
             <div class="result-section">
                 <% videoData.forEach(function(video, index) { %>
                     <div class="video-item">
-                        <h2>영상 #<%= index + 1 %></h2>
+                        <h2>video #<%= index + 1 %></h2>
                         <% if (video.thumbnail_link) { %>
                             <img
                                 src="<%= video.thumbnail_link %>"
@@ -66,7 +65,7 @@
                 <% }); %>
                 <!-- 다른 영상 다운로드 버튼 -->
                 <a href="/" class="other-download-button">
-                    다른 영상 다운로드
+                    another video down
                 </a>
             </div>
         <% } else if (submittedUrl && !error) { %>

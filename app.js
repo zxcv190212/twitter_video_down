@@ -15,12 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // URL 인코딩된 본문 파싱 설정 (폼 데이터 처리를 위함)
 app.use(express.urlencoded({ extended: true }));
 
-/**
- * 트위터 게시물 URL에서 모든 영상의 최고 화질/음질 직접 다운로드 링크와 썸네일 링크를 추출합니다.
- *
- * @param {string} tweetUrl 트위터 게시물 URL
- * @returns {Promise<Array<{video_link: string|null, thumbnail_link: string|null}>>}
- */
+
 async function getAllVideoLinksAndThumbnails(tweetUrl) {
     console.log(`--- 트위터 게시물 내 모든 영상 및 썸네일 링크 추출 시도: ${tweetUrl} ---`);
 
