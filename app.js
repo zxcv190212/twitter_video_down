@@ -35,7 +35,7 @@ async function getAllVideoLinksAndThumbnails(tweetUrl) {
             if (error) {
                 console.error(`명령어 실행 오류: ${error.message}`);
                 console.error(`stderr: ${stderr}`);
-                return reject(new Error(`영상을 가져오는 데 실패했습니다. (${error.message})`));
+                return reject(new Error(`영상을 가져오는 데 실패했습니다`));
             }
 
             try {
