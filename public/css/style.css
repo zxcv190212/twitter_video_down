@@ -123,18 +123,18 @@ button[type="submit"]:hover {
 }
 
 .thumbnail {
-    max-width: 350px;
-    max-height: 250px;
-    width: auto;
-    height: auto;
+    /* 변경된 부분 */
+    max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 합니다. */
+    height: auto; /* 이미지의 비율을 유지하면서 높이를 자동으로 조절합니다. */
+    /* max-height: 250px; 은 제거하거나 필요에 따라 조절할 수 있습니다. */
+
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     margin-bottom: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    object-fit: contain;
+    object-fit: contain; /* 이 속성은 이미지 비율을 유지하면서 박스 안에 맞춥니다. */
 }
 
 .download-button {
