@@ -106,14 +106,14 @@ button[type="submit"]:hover {
     border-top: 1px solid #eee;
 
     display: flex;
-    flex-wrap: wrap; /* 여러 줄 허용 */
+    flex-direction: column; /* 아이템들을 세로로 쌓습니다. */
     gap: 25px; /* 아이템 사이 간격 */
-    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 세로로 쌓인 아이템들을 가운데 정렬합니다. */
 }
 
 .video-item {
-    flex: 1 1 280px; /* 기본 너비 280px, 공간 따라 늘어남 */
-    max-width: 320px;
+    width: 100%; /* 부모(result-section) 너비에 맞춰 늘어나도록 합니다. */
+    max-width: 380px; /* 개별 비디오 아이템의 최대 너비를 지정합니다. */
     background-color: #fafafa;
     padding: 15px;
     border-radius: 10px;
@@ -133,7 +133,7 @@ button[type="submit"]:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
+
     object-fit: contain;
 }
 
@@ -167,9 +167,11 @@ button[type="submit"]:hover {
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 30px; /* 영상 아래에 충분한 간격을 둡니다. */
     box-shadow: 0 3px 10px rgba(0, 123, 255, 0.4);
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* 부모(result-section) 너비에 맞춰 늘어나도록 합니다. */
+    max-width: 300px; /* 버튼의 최대 너비를 지정합니다. */
 }
 
 .other-download-button:hover {
